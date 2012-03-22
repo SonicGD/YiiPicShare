@@ -141,7 +141,7 @@
 <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="<?=Yii::app()->theme->baseUrl?>/js/vendor/jquery.ui.widget.js"></script>
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="http://blueimp.github.com/JavaScript-Templates/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
