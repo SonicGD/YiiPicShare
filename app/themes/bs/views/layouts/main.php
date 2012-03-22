@@ -17,7 +17,9 @@
     //echo Yii::app()->bootstrap->registerCoreCss();
     $cs = Yii::app()->getClientScript();
     $cs->registerCssFile(Yii::app()->theme->baseUrl . "/css/bootstrap.min.css");
+    $cs->registerCssFile(Yii::app()->theme->baseUrl . "/css/jquery.fileupload-ui.css");
     $cs->registerCssFile(Yii::app()->theme->baseUrl . "/css/style.css");
+
     //$cs->registerCoreScript('jquery');
     //$cs->registerScriptFile($cs->getCoreScriptUrl() . '/jui/js/jquery-ui.min.js');
     //$cs->registerScriptFile($cs->getCoreScriptUrl() . '/jui/js/jquery-ui-i18n.min.js');
