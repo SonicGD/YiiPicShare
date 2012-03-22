@@ -152,19 +152,19 @@
 <script src="http://blueimp.github.com/cdn/js/bootstrap.min.js"></script>
 <script src="http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/jquery.fileupload.js"></script>
 <!-- The File Upload image processing plugin -->
-<script src="js/jquery.fileupload-ip.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/jquery.fileupload-ip.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="js/jquery.fileupload-ui.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/jquery.fileupload-ui.js"></script>
 <!-- The localization script -->
-<script src="js/locale.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/locale.js"></script>
 <!-- The main application script -->
-<script src="js/main.js"></script>
+<script src="<?=Yii::app()->theme->basePath?>/js/main.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]>
-<script src="js/cors/jquery.xdr-transport.js"></script><![endif]-->
+<script src="<?=Yii::app()->theme->basePath?>/js/cors/jquery.xdr-transport.js"></script><![endif]-->
 </body>
 </html>
