@@ -309,7 +309,7 @@ class UploadHandler
                 foreach ($this->options['image_versions'] as $version => $options) {
                     if ($this->create_scaled_image($file->name, $options)) {
                         if ($this->options['upload_dir'] !== $options['upload_dir']) {
-                            $file->{$version . '_url'} = str_ireplace($options['upload_dir'], $options['upload_url'], $file_path);
+                            $file->{$version . '_url'} = str_ireplace($this->options['upload_dir'], $options['upload_url'], $file_path);
                         } else {
                             clearstatcache();
                             $file_size = filesize($file_path);
