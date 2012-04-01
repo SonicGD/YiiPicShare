@@ -304,7 +304,7 @@ class UploadHandler
                     $this->orient_image($file_path);
                 }
                 //$file->url = $this->options['upload_url'] . rawurlencode($file->name);
-                $file->url = rawurlencode(str_ireplace($this->options['upload_dir'], $this->options['upload_url'], $file_path));
+                $file->url = str_ireplace($this->options['upload_dir'], $this->options['upload_url'], $file_path);
                 foreach ($this->options['image_versions'] as $version => $options) {
                     if ($this->create_scaled_image($file->name, $options)) {
                         if ($this->options['upload_dir'] !== $options['upload_dir']) {
