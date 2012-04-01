@@ -99,7 +99,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="/"><?=Yii::app()->name?></a>
+            <a class="brand" href="/">Выберите файлы</a>
 
             <div class="nav-collapse">
                 <?php
