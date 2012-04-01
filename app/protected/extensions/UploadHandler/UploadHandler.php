@@ -422,9 +422,9 @@ class UploadHandler
         $root = $thumb ? $this->options['image_versions']['thumbnail']['upload_dir'] : $this->options['upload_dir'];
         if (!is_dir($root . date("Y"))) mkdir($root . date("Y"), 0777);
         $path = $root . date("Y")."/";
-        if (!is_dir($root . date("m"))) mkdir($path . date("m"), 0777);
+        if (!is_dir($path . date("m"))) mkdir($path . date("m"), 0777);
         $path = $path . date("m")."/";
-        if (!is_dir($root . date("d"))) mkdir($path . date("d"), 0777);
+        if (!is_dir($path . date("d"))) mkdir($path . date("d"), 0777);
         $path = $path . date("d");
         $md5 = md5($fileName);
         $subdir = substr($md5, 5, 2);
