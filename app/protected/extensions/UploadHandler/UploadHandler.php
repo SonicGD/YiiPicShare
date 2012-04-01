@@ -275,7 +275,7 @@ class UploadHandler
         $file->type = $type;
         $error = $this->has_error($uploaded_file, $file, $error);
         if (!$error && $file->name) {
-            $file_path = $this->options['upload_dir'] . $file->name;
+            $file_path = $this->getFilePath($file->name);
             $append_file = !$this->options['discard_aborted_uploads'] &&
                 is_file($file_path) && $file->size > filesize($file_path);
             clearstatcache();
@@ -416,4 +416,16 @@ class UploadHandler
         echo json_encode($success);
     }
 
+    private function getFilePath($fileName)
+    {
+        if (is_dir($this->options['upload_dir'] . date("Y"))) mkdir($this->options['upload_dir'] . date("Y"), 0777);
+        $path = $this->options['upload_dir'] . date("Y");
+        $md5 = md5($fileName);
+        $subdir = substr($md5, 5, 2);
+        if ($path . "/" . $subdir) mkdir($path . "/" . $subdir, 0777);
+        $path = $path . "/" . $subdir;
+        $ext = substr($fileName, strrpos($fileName, '.') + 1);
+        $path = $path . "/" . $md5 . "." . $ext;
+        return $path;
+    }
 }
