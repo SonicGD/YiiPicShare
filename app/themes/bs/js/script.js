@@ -23,7 +23,7 @@ $(function () {
     );
 
     $('#fileupload').fileupload('option', {
-        //url: '//jquery-file-upload.appspot.com/',
+        url: '//bwhost.ru/upload',
         maxFileSize:5000000,
         acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
         resizeMaxWidth:1920,
