@@ -14,15 +14,15 @@ $(function () {
         resizeMaxHeight:1200
     });
 // Upload server status check for browsers with CORS support:
-    if ($.support.cors) {
-        $.ajax({
-            url:'//bwhost.ru/',
-            type:'HEAD'
-        }).fail(function () {
-                $('<span class="alert alert-error"/>')
-                    .text('Upload server currently unavailable - ' +
-                    new Date())
-                    .appendTo('#fileupload');
-            });
-    }
+    /*if ($.support.cors) {
+     $.ajax({
+     url:'//bwhost.ru/',
+     type:'HEAD'
+     }).fail(function () {
+     $('<span class="alert alert-error"/>')
+     .text('Upload server currently unavailable - ' +
+     new Date())
+     .appendTo('#fileupload');
+     });
+     }*/
 });
