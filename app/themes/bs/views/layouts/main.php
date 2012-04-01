@@ -24,8 +24,8 @@
     //$cs->registerScriptFile($cs->getCoreScriptUrl() . '/jui/js/jquery-ui.min.js');
     //$cs->registerScriptFile($cs->getCoreScriptUrl() . '/jui/js/jquery-ui-i18n.min.js');
     //$cs->registerCssFile($cs->getCoreScriptUrl() . '/jui/css' . '/base/' . 'jquery-ui.css');
-    $cs->registerScriptFile(Yii::app()->theme->baseUrl . "/js/bootstrap.min.js");
-    $cs->registerScriptFile(Yii::app()->theme->baseUrl . "/js/script.js");
+    //$cs->registerScriptFile(Yii::app()->theme->baseUrl . "/js/bootstrap.min.js");
+    //$cs->registerScriptFile(Yii::app()->theme->baseUrl . "/js/script.js");
 
 
     ?>
@@ -164,7 +164,7 @@
 <!-- The localization script -->
 <script src="<?=Yii::app()->theme->baseUrl?>/js/locale.js"></script>
 <!-- The main application script -->
-<!--<script src="<?=Yii::app()->theme->baseUrl?>/js/main.js"></script>-->
+<script src="<?=Yii::app()->theme->baseUrl?>/js/script.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]>
 <script src="<?=Yii::app()->theme->baseUrl?>/js/cors/jquery.xdr-transport.js"></script><![endif]-->
