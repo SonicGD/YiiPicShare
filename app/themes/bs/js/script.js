@@ -6,6 +6,22 @@
  * To change this template use File | Settings | File Templates.
  */
 $(function () {
+
+    'use strict';
+
+    // Initialize the jQuery File Upload widget:
+    $('#fileupload').fileupload();
+
+    // Enable iframe cross-domain access via redirect option:
+    $('#fileupload').fileupload(
+        'option',
+        'redirect',
+        window.location.href.replace(
+            /\/[^\/]*$/,
+            '/cors/result.html?%s'
+        )
+    );
+
     $('#fileupload').fileupload('option', {
         //url: '//jquery-file-upload.appspot.com/',
         maxFileSize:5000000,
