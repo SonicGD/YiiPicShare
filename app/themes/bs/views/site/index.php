@@ -1,3 +1,6 @@
+<?php
+$this->pageTitle = "Выберите файлы";
+?>
 <form id="fileupload" action="/upload" method="POST" enctype="multipart/form-data">
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
     <div class="row fileupload-buttonbar">
