@@ -93,7 +93,7 @@ return array(
         'adminEmail' => 'webmaster@example.com',
         'upload_dir' => '/var/www/bwhost.ru/images/',
         'upload_url' => 'http://images.bwhost.ru/',
-        'thumb_dir' => '/var/www/bwhost.ru/thumb/',
+        'thumb_dir' => '/var/www/bwhost.ru/thumbs/',
         'thumb_url' => 'http://thumbs.bwhost.ru/'
     ),
 );
