@@ -305,7 +305,7 @@ class UploadHandler
                 }
                 //$file->url = $this->options['upload_url'] . rawurlencode($file->name);
                 $file->url = str_ireplace($this->options['upload_dir'], $this->options['upload_url'], $file_path);
-                $file->thumbnail_url = $file->url;
+                //$file->thumbnail_url = $file->url;
                 foreach ($this->options['image_versions'] as $version => $options) {
                     if ($this->create_scaled_image($file->name, $options)) {
                         if ($this->options['upload_dir'] !== $options['upload_dir']) {
@@ -419,7 +419,7 @@ class UploadHandler
 
     private function getFilePath($fileName, $thumb = false)
     {
-        $root = $thumb ? $this->options['thumbnail']['upload_dir'] : $this->options['upload_dir'];
+        $root = $thumb ? $this->options['image_versions']['thumbnail']['upload_dir'] : $this->options['upload_dir'];
         if (!is_dir($root . date("Y"))) mkdir($root . date("Y"), 0777);
         $path = $root . date("Y");
         $md5 = md5($fileName);
