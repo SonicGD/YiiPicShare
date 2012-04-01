@@ -164,7 +164,7 @@
 <!-- The localization script -->
 <script src="<?=Yii::app()->theme->baseUrl?>/js/locale.js"></script>
 <!-- The main application script -->
-<script src="<?=Yii::app()->theme->baseUrl?>/js/main.js"></script>
+<!--<script src="<?=Yii::app()->theme->baseUrl?>/js/main.js"></script>-->
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]>
 <script src="<?=Yii::app()->theme->baseUrl?>/js/cors/jquery.xdr-transport.js"></script><![endif]-->
