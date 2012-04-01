@@ -104,7 +104,7 @@
             <div class="nav-collapse">
                 <?php
                 $items = array(
-                    array('label' => 'Главная', 'url' => array('/')),
+                    //array('label' => 'Главная', 'url' => array('/site/index')),
                     array('label' => 'О сервисе', 'url' => array('/about')),
                 );
 
