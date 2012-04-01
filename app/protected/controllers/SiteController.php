@@ -98,6 +98,7 @@ class SiteController extends Controller
 
     public function actionUpload()
     {
+        Yii::import("application.extensions.UploadHandler.UploadHandler");
         $upload_handler = new UploadHandler();
 
         header('Pragma: no-cache');
