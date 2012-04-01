@@ -111,8 +111,8 @@ class UploadHandler
 
     protected function create_scaled_image($file_name, $options)
     {
-        $file_path = $this->options['upload_dir'] . $file_name;
-        $new_file_path = $options['upload_dir'] . $file_name;
+        $file_path = $this->getFilePath($file_name);
+        $new_file_path = $this->getFilePath($file_name, "thumb");
         list($img_width, $img_height) = @getimagesize($file_path);
         if (!$img_width || !$img_height) {
             return false;
@@ -309,8 +309,7 @@ class UploadHandler
                 foreach ($this->options['image_versions'] as $version => $options) {
                     if ($this->create_scaled_image($file->name, $options)) {
                         if ($this->options['upload_dir'] !== $options['upload_dir']) {
-                            $file->{$version . '_url'} = $options['upload_url']
-                                . rawurlencode($file->name);
+                            $file->{$version . '_url'} = str_ireplace($options['upload_dir'], $options['upload_url'], $file_path);
                         } else {
                             clearstatcache();
                             $file_size = filesize($file_path);
@@ -418,10 +417,11 @@ class UploadHandler
         echo json_encode($success);
     }
 
-    private function getFilePath($fileName)
+    private function getFilePath($fileName, $thumb = false)
     {
-        if (!is_dir($this->options['upload_dir'] . date("Y"))) mkdir($this->options['upload_dir'] . date("Y"), 0777);
-        $path = $this->options['upload_dir'] . date("Y");
+        $root = $thumb ? $this->options['thumbnail']['upload_dir'] : $this->options['upload_dir'];
+        if (!is_dir($root . date("Y"))) mkdir($root . date("Y"), 0777);
+        $path = $root . date("Y");
         $md5 = md5($fileName);
         $subdir = substr($md5, 5, 2);
         if (!is_dir($path . "/" . $subdir)) mkdir($path . "/" . $subdir, 0777);
