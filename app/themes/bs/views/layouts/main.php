@@ -136,7 +136,7 @@
     </div>
 
     <footer>
-        <p>&copy; www.BioWare.ru 2012-<?= date("Y") ?></p>
+        <p>&copy; www.BioWare.ru 2012<? if (date("Y") > 2012) { ?>-<?= date("Y") ?><?php }?></p>
     </footer>
 
 </div>
