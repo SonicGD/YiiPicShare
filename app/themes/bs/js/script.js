@@ -23,22 +23,10 @@ $(function () {
     );
 
     $('#fileupload').fileupload('option', {
-        url: '//bwhost.ru/upload',
-        maxFileSize:5000000,
-        acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
-        resizeMaxWidth:1920,
-        resizeMaxHeight:1200
+        url: '/upload',
+        maxFileSize: 5000000,
+        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+        resizeMaxWidth: 1920,
+        resizeMaxHeight: 1200
     });
-// Upload server status check for browsers with CORS support:
-    /*if ($.support.cors) {
-     $.ajax({
-     url:'//bwhost.ru/',
-     type:'HEAD'
-     }).fail(function () {
-     $('<span class="alert alert-error"/>')
-     .text('Upload server currently unavailable - ' +
-     new Date())
-     .appendTo('#fileupload');
-     });
-     }*/
 });
