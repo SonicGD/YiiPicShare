@@ -91,9 +91,9 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'webmaster@example.com',
-        'upload_dir' => '/var/www/bwhost.ru/images/',
+        'upload_dir' => '/var/www/bioware/bwhost.ru/images/',
         'upload_url' => 'http://images.bwhost.ru/',
-        'thumb_dir' => '/var/www/bwhost.ru/thumbs/',
+        'thumb_dir' => '/var/www/bioware/bwhost.ru/thumbs/',
         'thumb_url' => 'http://thumbs.bwhost.ru/'
     ),
 );
